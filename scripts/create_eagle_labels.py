@@ -33,5 +33,7 @@ def create_labels():
         bb = convert((w, h), b)
         x_bb, y_bb, w_bb, h_bb = bb 
         out_file.write(str(cls_id) + " " + f"{x_bb} {y_bb} {w_bb} {h_bb}")
-        
 
+if __name__ == "__main__":
+    create_labels()
+    
