@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 import os
 
 xml_path = "build/darknet/x64/data/annotations/"
-root = "build/darknet/x64/data/obj/"
+root = "build/darknet/x64/data/images/"
 
 def convert(size, box):
     dw = 1./(size[0])
