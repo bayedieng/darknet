@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 import os
 
-xml_path = "build/darknet/x64/data/eagle_labels/"
+xml_path = "build/darknet/x64/data/annotations/"
 root = "build/darknet/x64/data/obj/"
 
 def convert(size, box):
