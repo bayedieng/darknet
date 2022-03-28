@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 import os
 
 xml_path = "build/darknet/x64/data/annotations/"
-root = "build/darknet/x64/data/images/"
+data_root = "build/darknet/x64/data/obj/"
 
 def convert(size, box):
     dw = 1./(size[0])
@@ -20,7 +20,7 @@ def convert(size, box):
 def create_labels():
     for i in range(len(os.listdir(xml_path))):
         in_file = open(xml_path + f"Cars{i}.xml")
-        out_file = open(root + f"Cars{i}.txt", 'w+')
+        out_file = open(data_root + f"Cars{i}.txt", 'w+')
         tree=ET.parse(in_file)
         root = tree.getroot()
         size = root.find('size')
